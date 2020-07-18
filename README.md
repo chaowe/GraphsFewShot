@@ -1,6 +1,6 @@
 # FEW-SHOT LEARNING ON GRAPHS VIA SUPERCLASSES BASED ON GRAPH SPECTRAL MEASURES
 
-Source code for our [ICLR 2020](https://iclr.cc/Conferences/2020) paper: [FEW-SHOT LEARNING ON GRAPHS VIA SUPER-CLASSES BASED ON GRAPH SPECTRAL MEASURES](https://openreview.net/forum?id=Bkeeca4Kvr)
+Source code for our [ICLR 2020](https://iclr.cc/Conferences/2020) paper: [FEW-SHOT LEARNING ON GRAPHS VIA SUPER-CLASSES BASED ON GRAPH SPECTRAL MEASURES](https://openreview.net/forum?id=Bkeeca4Kvr). Associated Blogpost can be found [here](https://medium.com/@cs17btech11019/few-shot-learning-on-graphs-f6312a9e9de5).
 
 ### Requirements
 Please create a virtual environment for smoother functioning and to avoid any dependency issues. Please refer to [Managing Virtual Environments](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) for details on creating virtual environment.
@@ -43,6 +43,8 @@ Rest all the arguments are self-explanatory.
 To evaluate the model for 20-shot on TRIANGLES datasets run - 
 
 `python3 main.py --dataset_name TRIANGLES --batch_size 64 --knn_value 2`
+
+An example usage for the above has been provided in the jupyter notebook: [src/example.ipynb](https://github.com/chauhanjatin10/GraphsFewShot/blob/master/src/example.ipynb) .
 
 The `src/checkpoints` directory stores the trained weights for the model. Run the bash file `clear_checkpoints.sh` to clear existing checkpoints. The `dataloader.py` file contains the class for loading data and creating splits for fine-tuning as well as testing. The base code for the files `graphcnn.py`, `mlp.py` and `util.py` have been taken from the original implementation of the [GIN paper](https://github.com/weihua916/powerful-gnns) and further modified for our purpose. 
 
